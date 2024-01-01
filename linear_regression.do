@@ -16,7 +16,7 @@ correlate $ylist $xlist
 
 // graph twoway (scatter $ylist $x1list)
 
-reg $xy_list
+reg $xy1_list //its from here the xb is generated
 
 // graph twoway (scatter $xy1_list) ///
 // (lfit $xy1_list)
@@ -24,3 +24,6 @@ reg $xy_list
 predict y1hat, xb
 
 summarize y1hat $ylist
+
+graph twoway (scatter $xy1_list) ///
+(scatter y1hat $x1list)
