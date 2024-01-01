@@ -18,5 +18,9 @@ correlate $ylist $xlist
 
 reg $xy_list
 
-graph twoway (scatter $xy1_list) ///
-(lfit $xy1_list)
+// graph twoway (scatter $xy1_list) ///
+// (lfit $xy1_list)
+
+predict y1hat, xb
+
+summarize y1hat $ylist
