@@ -49,3 +49,5 @@ summarize y1hat $ylist
 predict e1hat, resid
 summ e1hat
 graph twoway (scatter e1hat $x1list)
+
+test $x1list
