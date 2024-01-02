@@ -43,5 +43,9 @@ predict y1hat, xb
 
 summarize y1hat $ylist
 
-graph twoway (scatter $xy1_list) ///
-(scatter y1hat $x1list)
+// graph twoway (scatter $xy1_list) ///
+// (scatter y1hat $x1list)
+
+predict e1hat, resid
+summ e1hat
+graph twoway (scatter e1hat $x1list)
