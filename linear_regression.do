@@ -51,3 +51,7 @@ summ e1hat
 graph twoway (scatter e1hat $x1list)
 
 test $x1list
+
+quietly reg $ylist $x1list
+margins, dydx(*) atmeans
+margins, dydx(*)
