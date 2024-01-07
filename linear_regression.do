@@ -56,6 +56,8 @@ quietly reg $ylist $x1list
 margins, dydx(*) atmeans
 margins, dydx(*)
 
+reg $ylist $xlist
+//drop yhat ehat
 predict yhat, xb
 summ yhat $ylist
 
@@ -63,3 +65,8 @@ predict ehat, resid
 summ ehat
 
 test $xlist
+
+margins, dydx(*) atmeans
+margins, dydx(*)
+
+
