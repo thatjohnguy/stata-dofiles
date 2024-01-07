@@ -55,3 +55,11 @@ test $x1list
 quietly reg $ylist $x1list
 margins, dydx(*) atmeans
 margins, dydx(*)
+
+predict yhat, xb
+summ yhat $ylist
+
+predict ehat, resid
+summ ehat
+
+test $xlist
