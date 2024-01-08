@@ -38,3 +38,6 @@ predict pmlogit1 pmlogit2 pmlogit3 pmlogit4, pr
 summ pmlogit1 pmlogit2 pmlogit3 pmlogit4
 
 tab $ylist
+
+mprobit $ylist $xlist
+mprobit $ylist $xlist, baseoutcome(2)
